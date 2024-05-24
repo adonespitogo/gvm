@@ -90,7 +90,7 @@ compile_go() {
 		MAKE_SCRIPT=make.bash
 		;;
 	esac
-	[ -z "$GOROOT_BOOTSTRAP" ] && export GOROOT_BOOTSTRAP=$(go env GOROOT) 
+	[ -z "$GOROOT_BOOTSTRAP" ] && export GOROOT_BOOTSTRAP=$(go env GOROOT)
 	unset GOARCH && unset GOOS && unset GOPATH && unset GOBIN && unset GOROOT &&
 	export GOBIN=$GO_INSTALL_ROOT/bin &&
 	export PATH=$GOBIN:$PATH &&
@@ -253,7 +253,7 @@ install_go_binary() {
 
 install_gpkg() {
 	display_message " * Installing gpkg..."
-	$GVM_GOINSTALL github.com/moovweb/gpkg > "$GVM_ROOT/logs/$GO_NAME-gpkg.log" 2>&1 || return 1
+	$GVM_GOINSTALL github.com/adonespitogo/gpkg > "$GVM_ROOT/logs/$GO_NAME-gpkg.log" 2>&1 || return 1
 }
 
 install_gb() {
